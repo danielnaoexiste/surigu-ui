@@ -11,7 +11,7 @@
     "declarationDir": "types",
     "sourceMap": true,
     "outDir": "dist",
-    "moduleResolution": "node",
+    "moduleResolution": "NodeNext",
     "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": true,
     "useDefineForClassFields": true,
