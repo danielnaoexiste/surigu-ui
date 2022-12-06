@@ -1,6 +1,6 @@
 {
-  "name": "bit-design-system",
-  "version": "0.0.1",
+  "name": "@danielnaoexiste/bit-components",
+  "version": "0.0.2",
   "description": "React component library",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -18,11 +18,17 @@
     "@rollup/plugin-commonjs": "^23.0.3",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-typescript": "^10.0.1",
+    "postcss": "^8.4.19",
     "rollup": "^3.6.0",
-    "rollup-plugin-dts": "^5.0.0"
+    "rollup-plugin-dts": "^5.0.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tslib": "^2.4.1"
   },
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/danielnaoexiste"
+  },
   "types": "dist/index.d.ts"
 }
