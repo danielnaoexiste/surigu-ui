@@ -4,7 +4,7 @@ import { Button } from "./Button";
 import { MdSettings } from "react-icons/md";
 
 export default {
-  title: "Bit/Button",
+  title: "Froggy/Button",
   component: Button,
   argTypes: {
     label: {

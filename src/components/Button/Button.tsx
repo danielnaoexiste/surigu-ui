@@ -18,7 +18,7 @@ export const Button: FC<ButtonProps> = ({
   <button
     onClick={onClick}
     className={clsx(
-      "transition-colors border-2 duration-500 font-bold py-2 px-4 rounded inline-flex items-center gap-2",
+      "font-code transition-colors border-2 duration-500 font-bold py-1 px-3 rounded inline-flex items-center gap-2",
       {
         "bg-brand-600 border-transparent hover:bg-brand-800 text-white":
           variant === "contained",
