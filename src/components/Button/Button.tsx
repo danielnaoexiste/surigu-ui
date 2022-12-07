@@ -1,6 +1,6 @@
 import type { FC } from "react";
 
-import { StyledButton, ButtonProps } from "@styles/Button";
+import { StyledButton, ButtonProps } from "./Button.styles";
 
 export const Button: FC<ButtonProps> = ({
   label,
