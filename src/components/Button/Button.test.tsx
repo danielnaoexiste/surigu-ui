@@ -1,8 +1,13 @@
-import { render } from "@testing-library/react";
 import { Button } from "./Button";
+import { render } from "@utils/render";
 
 describe("Button", () => {
-  test("renders the Button component", () => {
-    render(<Button onClick={() => null} label="Hello world!" />);
+  test("should render the Button component", () => {
+    render(<Button onClick={() => null} />);
+  });
+
+  test("should renders the Label as child", () => {
+    const { getByTestId } = render(<Button label="Froggy" />);
+    expect(getByTestId("button").textContent).toBe("Froggy");
   });
 });

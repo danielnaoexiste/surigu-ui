@@ -1,10 +1,11 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import { Button } from "./Button";
 import { MdSettings } from "react-icons/md";
+import Box from "@components/Box";
 
 export default {
-  title: "Froggy/Button",
+  title: "Form/Button",
   component: Button,
   argTypes: {
     label: {
@@ -17,7 +18,7 @@ export default {
       description: "Sets the button variant.",
     },
     onClick: {
-      control: { type: "function" },
+      action: "Button Clicked",
       description: "onClick handler, executes a method on click.",
     },
     prefix: {
@@ -27,8 +28,11 @@ export default {
   },
 } as ComponentMeta<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
-
+const Template: ComponentStory<typeof Button> = (args) => (
+  <Box>
+    <Button {...args} />
+  </Box>
+);
 export const Contained = Template.bind({});
 export const Outlined = Template.bind({});
 export const Prefix = Template.bind({});
@@ -36,18 +40,15 @@ export const Prefix = Template.bind({});
 Contained.args = {
   label: "contained",
   variant: "contained",
-  onClick: () => null,
 };
 
 Outlined.args = {
   label: "outlined",
   variant: "outlined",
-  onClick: () => null,
 };
 
 Prefix.args = {
   label: "Prefixed",
   variant: "contained",
-  onClick: () => null,
   prefix: <MdSettings />,
 };

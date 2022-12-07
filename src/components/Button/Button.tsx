@@ -1,35 +1,17 @@
-import "../index.css";
-import clsx from "clsx";
+import type { FC } from "react";
 
-import { FC, MouseEventHandler, ReactNode } from "react";
-export interface ButtonProps {
-  label: ReactNode;
-  onClick: MouseEventHandler;
-  variant?: "contained" | "outlined";
-  prefix?: ReactNode;
-}
+import { StyledButton, ButtonProps } from "@styles/Button";
 
 export const Button: FC<ButtonProps> = ({
   label,
-  onClick,
-  prefix = null,
+  prefix,
   variant = "contained",
+  ...props
 }) => (
-  <button
-    onClick={onClick}
-    className={clsx(
-      "font-code transition-colors border-2 duration-500 font-bold py-1 px-3 rounded inline-flex items-center gap-2",
-      {
-        "bg-brand-600 border-transparent hover:bg-brand-800 text-white":
-          variant === "contained",
-        "bg-transparent border-brand-500 text-brand hover:bg-brand-600 hover:text-white hover:border-transparent":
-          variant === "outlined",
-      }
-    )}
-  >
+  <StyledButton data-testid="button" variant={variant} {...props}>
     <>
       {!!prefix && prefix}
       {label}
     </>
-  </button>
+  </StyledButton>
 );
