@@ -1,5 +1,5 @@
 import { Text } from "./Text";
-import { render } from "@utils/render";
+import { render } from "../../utils/render";
 
 describe("Text", () => {
   test("should render the Text component", () => {

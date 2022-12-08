@@ -1,7 +1,7 @@
 import type { FC, ReactNode } from "react";
 import { render } from "@testing-library/react";
 
-import defaultTheme from "@providers/theme";
+import defaultTheme from "../providers/theme";
 import { ThemeProvider } from "styled-components";
 
 interface Props {

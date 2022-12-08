@@ -1,5 +1,5 @@
 import { Button } from "./Button";
-import { render } from "@utils/render";
+import { render } from "../../utils/render";
 
 describe("Button", () => {
   test("should render the Button component", () => {

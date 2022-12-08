@@ -1,5 +1,5 @@
 import { Box } from "./Box";
-import { render } from "@utils/render";
+import { render } from "../../utils/render";
 
 describe("Box", () => {
   test("should render the Box component", () => {

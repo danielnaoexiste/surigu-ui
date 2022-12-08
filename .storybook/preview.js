@@ -1,7 +1,7 @@
 import { themes } from "@storybook/theming";
 import { addDecorator } from "@storybook/react";
 
-import defaultTheme from "@providers/theme";
+import defaultTheme from "../src/providers/theme";
 import { ThemeProvider } from "styled-components";
 
 export const parameters = {

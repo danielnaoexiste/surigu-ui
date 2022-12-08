@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import { Button } from "./Button";
 import { MdSettings } from "react-icons/md";
-import Box from "@components/Box";
+import Box from "../Box";
 
 export default {
   title: "Form/Button",
