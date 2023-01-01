@@ -15,5 +15,8 @@
     "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": true,
     "useDefineForClassFields": true,
+    "types": [
+      "mdx"
+    ]
   }
 }

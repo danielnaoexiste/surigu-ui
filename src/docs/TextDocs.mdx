@@ -1,0 +1,52 @@
+import { Canvas, Story, ArgsTable, Props } from "@storybook/addon-docs";
+import { Text } from "../components/Text";
+
+import SpaceDocs from "./styled-system/SpaceDocs.mdx";
+import ColorDocs from "./styled-system/ColorDocs.mdx";
+import TypographyDocs from "./styled-system/TypographyDocs.mdx";
+
+## Text
+
+`Text` is a `Typo` component, that is used for rendering text.
+
+### Import
+
+```js
+import { Text } from "@danielnaoexiste/froggy-components";
+```
+
+### Usage
+
+<Canvas>
+  <Story id="typo-text--default" />
+</Canvas>
+
+<hr />
+
+### Truncate
+
+<hr />
+
+Use the `truncate` prop to to make the text overflow truncate.
+
+<Canvas>
+  <Story id="typo-text--truncated" />
+</Canvas>
+
+### Props
+
+<hr />
+
+#### Text-Specific Props
+
+<ArgsTable from={Text} />
+
+### Styled-System Props
+
+<hr />
+
+<SpaceDocs />
+<hr />
+<ColorDocs />
+<hr />
+<TypographyDocs />

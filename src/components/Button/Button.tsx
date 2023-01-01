@@ -6,6 +6,7 @@ export const Button: FC<ButtonProps> = ({
   label,
   prefix,
   variant = "contained",
+  margin,
   ...props
 }) => (
   <StyledButton data-testid="button" variant={variant} {...props}>

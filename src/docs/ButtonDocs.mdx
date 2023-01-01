@@ -1,0 +1,72 @@
+import { Canvas, Story, ArgsTable, Props } from "@storybook/addon-docs";
+import { Button } from "../components/Button";
+
+import SpaceDocs from "./styled-system/SpaceDocs.mdx";
+import BorderDocs from "./styled-system/BorderDocs.mdx";
+import LayoutDocs from "./styled-system/LayoutDocs.mdx";
+import TypographyDocs from "./styled-system/TypographyDocs.mdx";
+
+## Button
+
+`Button` is a `Form` component, that is used to trigger an action or event, such as submitting a form, or performing an operation.
+It has three possible variants.
+
+### Import
+
+```js
+import { Button } from "@danielnaoexiste/froggy-components";
+```
+
+### Usage
+
+<Canvas>
+  <Story id="form-button--default" />
+</Canvas>
+
+<hr />
+
+### Variants
+
+<hr />
+
+Use the `variant` prop to change the visual style of the button. You can set the value to `contained` or `outlined`.
+
+#### Contained
+
+<Canvas>
+  <Story id="form-button--contained" />
+</Canvas>
+
+#### Outlined
+
+<Canvas>
+  <Story id="form-button--outlined" />
+</Canvas>
+
+### Prefix
+
+<hr />
+
+<Canvas>
+  <Story id="form-button--prefix" />
+</Canvas>
+
+### Props
+
+<hr />
+
+#### Button-Specific Props
+
+<ArgsTable from={Button} />
+
+### Styled-System Props
+
+<hr />
+
+<SpaceDocs />
+<hr />
+<BorderDocs />
+<hr />
+<LayoutDocs />
+<hr />
+<TypographyDocs />

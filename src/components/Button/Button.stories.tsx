@@ -1,8 +1,9 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-
 import { Button } from "./Button";
 import { MdSettings } from "react-icons/md";
 import Box from "../Box";
+
+import ButtonDocs from "../../docs/ButtonDocs.mdx";
 
 export default {
   title: "Form/Button",
@@ -11,6 +12,7 @@ export default {
     label: {
       control: { type: "text" },
       description: "Text to be displayed inside the button.",
+      defaultValue: "Button",
     },
     variant: {
       control: { type: "radio" },
@@ -26,6 +28,11 @@ export default {
       description: "Sets a Prefix Icon. Can be any ReactNode.",
     },
   },
+  parameters: {
+    docs: {
+      page: ButtonDocs,
+    },
+  },
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => (
@@ -33,6 +40,8 @@ const Template: ComponentStory<typeof Button> = (args) => (
     <Button {...args} />
   </Box>
 );
+
+export const Default = Template.bind({});
 export const Contained = Template.bind({});
 export const Outlined = Template.bind({});
 export const Prefix = Template.bind({});

@@ -3,9 +3,16 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Box from "../Box";
 import { Text } from "./Text";
 
+import TextDocs from "../../docs/TextDocs.mdx";
+
 export default {
   component: Text,
   title: "Typo/Text",
+  parameters: {
+    docs: {
+      page: TextDocs,
+    },
+  },
 } as ComponentMeta<typeof Text>;
 
 const Template: ComponentStory<typeof Text> = (args) => (

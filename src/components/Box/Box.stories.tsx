@@ -2,9 +2,16 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { Box } from "./Box";
 
+import BoxDocs from "../../docs/BoxDocs.mdx";
+
 export default {
   component: Box,
   title: "Layout/Box",
+  parameters: {
+    docs: {
+      page: BoxDocs,
+    },
+  },
 } as ComponentMeta<typeof Box>;
 
 const Template: ComponentStory<typeof Box> = (args) => (
@@ -14,7 +21,9 @@ const Template: ComponentStory<typeof Box> = (args) => (
 export const Example = Template.bind({});
 
 Example.args = {
-  marginBottom: 10,
+  padding: 10,
   color: "blue",
   children: "Froggy",
+  backgroundColor: "#131313",
+  width: "fit-content",
 };

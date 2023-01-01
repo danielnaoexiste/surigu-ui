@@ -32,6 +32,7 @@
     "@storybook/testing-library": "^0.0.13",
     "@testing-library/react": "^13.4.0",
     "@types/jest": "^29.2.4",
+    "@types/mdx": "^2.0.3",
     "@types/react": "^18.0.26",
     "@types/styled-components": "^5.1.26",
     "@types/styled-system": "^5.1.15",
