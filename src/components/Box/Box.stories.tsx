@@ -23,7 +23,7 @@ export const Example = Template.bind({});
 Example.args = {
   padding: 10,
   color: "blue",
-  children: "Froggy",
+  children: "Surigu",
   backgroundColor: "#131313",
   width: "fit-content",
 };
