@@ -40,12 +40,12 @@ export interface BoxProps
 
 export const StyledBox = styled("div")<BoxProps>(
   {
-    fontFamily: "Source Code Pro, monospace",
+    fontFamily: "Roboto Mono, monospace",
     boxSizing: "border-box",
   },
   compose(
-    color,
     space,
+    color,
     border,
     layout,
     flexbox,

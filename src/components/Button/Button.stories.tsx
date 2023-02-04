@@ -12,12 +12,22 @@ export default {
     label: {
       control: { type: "text" },
       description: "Text to be displayed inside the button.",
-      defaultValue: "Button",
+      defaultValue: "button",
+    },
+    disabled: {
+      control: { type: "boolean" },
+      description: "Disables the button.",
+      defaultValue: false,
     },
     variant: {
       control: { type: "radio" },
-      options: ["contained", "outlined"],
+      options: ["primary", "secondary", "danger", "neutral"],
       description: "Sets the button variant.",
+    },
+    size: {
+      control: { type: "radio" },
+      options: ["sm", "md", "lg", "xlg"],
+      description: "Sets the button size.",
     },
     onClick: {
       action: "Button Clicked",
@@ -41,23 +51,34 @@ const Template: ComponentStory<typeof Button> = (args) => (
   </Box>
 );
 
-export const Default = Template.bind({});
-export const Contained = Template.bind({});
-export const Outlined = Template.bind({});
+export const Primary = Template.bind({});
+export const Secondary = Template.bind({});
+export const Danger = Template.bind({});
+export const Neutral = Template.bind({});
 export const Prefix = Template.bind({});
 
-Contained.args = {
-  label: "contained",
-  variant: "contained",
+Primary.args = {
+  label: "primary",
+  variant: "primary",
 };
 
-Outlined.args = {
-  label: "outlined",
-  variant: "outlined",
+Secondary.args = {
+  label: "secondary",
+  variant: "secondary",
+};
+
+Danger.args = {
+  label: "danger",
+  variant: "danger",
+};
+
+Neutral.args = {
+  label: "neutral",
+  variant: "neutral",
 };
 
 Prefix.args = {
-  label: "Prefixed",
-  variant: "contained",
+  label: "prefixed",
+  variant: "primary",
   prefix: <MdSettings />,
 };

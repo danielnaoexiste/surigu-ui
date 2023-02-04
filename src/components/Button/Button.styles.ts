@@ -21,10 +21,46 @@ export interface ButtonProps
     LayoutProps,
     TypographyProps {
   prefix?: ReactNode;
-  variant?: "contained" | "outlined";
+  variant?: "primary" | "secondary" | "neutral" | "danger";
+  disabled?: boolean;
   label?: ReactNode;
   onClick?: MouseEventHandler;
+  className?: string;
 }
+
+const buttonVariants = variant({
+  variants: {
+    primary: {
+      color: "white",
+      bg: "primaryMedium",
+
+      "&:hover": {
+        bg: "primaryDark",
+      },
+    },
+    secondary: {
+      color: "white",
+      bg: "secondaryMedium",
+
+      "&:hover": {
+        bg: "secondaryDark",
+      },
+    },
+    neutral: {
+      color: "almostBlack",
+      bg: "white",
+    },
+    danger: {
+      color: "white",
+      bg: "red",
+    },
+  },
+});
+
+const buttonSizes = variant({
+  prop: "size",
+  key: "buttonSizes",
+});
 
 export const StyledButton = styled("button")<ButtonProps>(
   {
@@ -34,35 +70,17 @@ export const StyledButton = styled("button")<ButtonProps>(
     cursor: "pointer",
     lineHeight: "24px",
     fontWeight: "bold",
-    border: "2px solid",
     borderRadius: "4px",
     transition: "500ms",
     alignItems: "center",
-    padding: ".25rem .75rem",
-  },
-  variant({
-    variants: {
-      contained: {
-        color: "white",
-        bg: "primaryMedium",
-        borderColor: "transparent",
+    appearance: "button",
 
-        "&:hover": {
-          bg: "primaryDark",
-        },
-      },
-      outlined: {
-        color: "primary",
-        bg: "transparent",
-        borderColor: "primary",
-
-        "&:hover": {
-          bg: "primaryMedium",
-          color: "white",
-          borderColor: "transparent",
-        },
-      },
+    "&:disabled": {
+      cursor: "not-allowed",
+      opacity: "50%",
     },
-  }),
+  },
+  buttonVariants,
+  buttonSizes,
   compose(space, border, layout, typography)
 );

@@ -13,7 +13,7 @@ borderRadius.md = borderRadius[2];
 borderRadius.lg = borderRadius[3];
 
 const fonts = {
-  default: "Source Code Pro, monospace",
+  default: "Roboto Mono, monospace",
 };
 
 const fontSizes = ["10px", "12px", "14px", "16px", "18px", "20px", "25px"];
@@ -26,6 +26,25 @@ fontSizes.xlarge = fontSizes[5];
 fontSizes.xxlarge = fontSizes[6];
 
 const fontWeights = { regular: 400, medium: 500, semiBold: 600, bold: 700 };
+
+const buttonSizes = {
+  sm: {
+    fontSize: fontSizes.small,
+    padding: ".13rem .35rem",
+  },
+  md: {
+    fontSize: fontSizes.medium,
+    padding: ".25rem .75rem",
+  },
+  lg: {
+    fontSize: fontSizes.large,
+    padding: ".35rem 1rem",
+  },
+  xlg: {
+    fontSize: fontSizes.xlarge,
+    padding: ".5rem 1.25rem",
+  },
+};
 
 const space = [
   0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 40, 50, 60, 70, 80, 90, 100,
@@ -43,25 +62,27 @@ const colors = {
   black: "#000000",
 
   // brand
-  primaryLightest: "#cadabd",
-  primaryLight: "#bdd0ad",
-  primary: "#A3BE8C",
-  primaryMedium: "#79866D",
-  primaryDark: "#636A5E",
-  secondaryLightest: "#EFFBF5",
-  secondaryLight: "#D8F8E8",
-  secondary: "#10b455",
-  secondaryMedium: "#009e42",
-  secondaryDark: "#018437",
+  primaryLightest: "#D699C3",
+  primaryLight: "#D08ABA",
+  primary: "#C979B0",
+  primaryMedium: "#C56DA9",
+  primaryDark: "#BF5FA0",
+  secondaryLightest: "#ADB0D7",
+  secondaryLight: "#9FA3D0",
+  secondary: "#8489C2",
+  secondaryMedium: "#767CBC",
+  secondaryDark: "#696FB5",
+  background: "#352A43",
+  foreground: "#453758",
 
   // actions
-  info: "#2689ff",
-  success: "#62dd68",
-  warning: "#faad14",
-  error: "#ff4d4f",
+  info: "#CF6998",
+  success: "#98CF69",
+  warning: "#CCCF69",
+  error: "#CF6A69",
 
   // common
-  red: "#DE4E51",
+  red: "#CF6A69",
   pink: "#EB5387",
   purple: "#A652B4",
   deepPurple: "#8654DE",
@@ -81,6 +102,7 @@ const defaultTheme = {
   borderRadius,
   breakpoints,
   colors,
+  buttonSizes,
   fonts,
   fontSizes,
   fontWeights,
