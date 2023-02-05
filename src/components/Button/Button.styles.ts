@@ -21,7 +21,8 @@ export interface ButtonProps
     LayoutProps,
     TypographyProps {
   prefix?: ReactNode;
-  variant?: "primary" | "secondary" | "neutral" | "danger";
+  variant?: "primary" | "secondary" | "neutral" | "danger" | "text";
+  size?: "sm" | "md" | "lg" | "xlg";
   disabled?: boolean;
   label?: ReactNode;
   onClick?: MouseEventHandler;
@@ -53,6 +54,15 @@ const buttonVariants = variant({
     danger: {
       color: "white",
       bg: "red",
+    },
+    text: {
+      color: "white",
+      bg: "transparent",
+      border: "none",
+
+      "&:hover": {
+        opacity: 0.75,
+      },
     },
   },
 });

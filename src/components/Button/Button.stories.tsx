@@ -55,6 +55,7 @@ export const Primary = Template.bind({});
 export const Secondary = Template.bind({});
 export const Danger = Template.bind({});
 export const Neutral = Template.bind({});
+export const TextBtn = Template.bind({});
 export const Prefix = Template.bind({});
 
 Primary.args = {
@@ -75,6 +76,11 @@ Danger.args = {
 Neutral.args = {
   label: "neutral",
   variant: "neutral",
+};
+
+TextBtn.args = {
+  label: "text",
+  variant: "text",
 };
 
 Prefix.args = {
